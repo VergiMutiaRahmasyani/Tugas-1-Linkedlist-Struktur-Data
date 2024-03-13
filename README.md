@@ -91,5 +91,7 @@ while True:
         print("Maaf menu tidak tersedia")
 
 
+tampilkan_pesanan()
+hitung_total_harga()
             
             
