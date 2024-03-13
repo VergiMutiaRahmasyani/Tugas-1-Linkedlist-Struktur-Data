@@ -58,6 +58,27 @@ def tampilkan_menu():
     for menu, harga in daftar_menu.items():
         print(f"{menu} - {harga} ")
 
+# Fungsi untuk menampilkan pesanan yang sudah ditambahkan ke dalam keranjang
+def tambah_pesanan(menu, jumlah):
+    for _ in range(jumlah):
+        menu_list.add_order(menu, daftar_menu[menu])
+    print(f"{jumlah} {menu} telah ditambahkan di keranjang.")
+    
+# Fungsi untuk menampilkan pesanan yang telah di pilih
+def tampilkan_pesanan():
+    print("Pesanan Anda: ")
+    menu_list.display_orders()
+
+# Fungsi untuk menghitung total harga pesanan
+def hitung_total_harga():
+    total_harga = menu_list.calculate_total()
+    print(f"Total harga yang harus di bayarkan: {total_harga} Rupiah.")
+    print("---------------------------------------------------")
+    print("------------TERIMA KASIH TELAH BERBELANJA----------")
+
+# Menampilkan semua menu saat program dijalankan 
+tampilkan_menu()
+
 
 
 
