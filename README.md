@@ -36,6 +36,27 @@ class Pesanan:
             total += temp.harga
             temp = temp.next
         return total
+        # Daftar menu beserta harga
+daftar_menu = {
+        "Miexue Ice Cream": 5000,
+        "Boba Shake": 16000,
+        "Mi Sundae": 14000,
+        "Mi Ganas": 11000,
+        "Creamy Mango Boba": 22000
+}
+
+# Inisialisasi list untuk menyimpanan Pesanan
+menu_list = Pesanan ()
+
+# Fungsi untuk 
+def tampilkan_menu():
+    print("---Selamat Datang di D4 MIE Mixue---")
+    print("------------------------------------")
+    print("\nDAFTAR MENU DAN HARGA :")
+    print("------------------------------------")
+    
+    for menu, harga in daftar_menu.items():
+        print(f"{menu} - {harga} ")
 
 
 
