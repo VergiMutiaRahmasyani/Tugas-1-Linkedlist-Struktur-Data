@@ -22,6 +22,20 @@ class Pesanan:
                 temp = temp.next
             #menambahkan node baru dibelakang node terakhir
             temp.next = new_node
+            
+    def display_orders(self):
+        temp = self.head
+        while temp :
+            print(f"{temp.menu} - {temp.harga} ") # Menampilkan menu dan total harga
+            temp = temp.next
+            
+    def calculate_total(self):
+        total = 0
+        temp = self.head
+        while temp:
+            total += temp.harga
+            temp = temp.next
+        return total
 
 
 
