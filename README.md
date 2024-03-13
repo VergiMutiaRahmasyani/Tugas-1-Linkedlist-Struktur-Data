@@ -79,7 +79,16 @@ def hitung_total_harga():
 # Menampilkan semua menu saat program dijalankan 
 tampilkan_menu()
 
-
+# Meminta input dari pengguna
+while True:
+    pilihan = input("Silahkan pilih menu(ketik 'done' jika telah selesai ):").strip()
+    if pilihan.lower() == 'done':
+        break
+    elif pilihan in daftar_menu:
+        jumlah_pesanan = int (input("Masukkan jumlah pesanan: ") )
+        tambah_pesanan(pilihan, jumlah_pesanan)
+    else:
+        print("Maaf menu tidak tersedia")
 
 
             
